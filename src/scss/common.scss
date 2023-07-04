@@ -1,0 +1,50 @@
+// Заголовки, загальні БЕМ блоки та інше...
+// Pages
+.page {
+	// .page__main
+	&__main {
+	}
+	// .page__about
+	&__about {
+	}
+	// .page__blend
+	&__blend {
+	}
+	// .page__why
+	&__why {
+	}
+	// .page__get
+	&__get {
+	}
+	// .page__feedback
+	&__feedback {
+	}
+	// .page__subscribe
+	&__subscribe {
+	}
+}
+// Section-header
+.section-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	row-gap: rem(16);
+}
+// Title
+.title {
+	@include adaptiveValue("font-size", 54, 35);
+	font-weight: 700;
+	color: var(--accent);
+}
+// Footer-title
+.footer-title {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 26, 22);
+}
+// Text
+.text {
+	@include adaptiveValue("font-size", 20, 18);
+	line-height: math.div(34, 20);
+}

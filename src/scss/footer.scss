@@ -1,0 +1,117 @@
+//====================================================================================================
+.footer {
+	background: #442808 url("@img/backgrounds/fotter_image.png") center/cover no-repeat;
+	background-blend-mode: overlay;
+	color: var(--secondary);
+	@include adaptiveValue("padding-bottom", 72, 40);
+	@include adaptiveValue("padding-top", 162, 80);
+	// .footer__container
+	&__container {
+	}
+	// .footer__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+		@include adaptiveValue("gap", 66, 36);
+	}
+	// .footer__info
+	&__info {
+	}
+	// .footer__nav
+	&__nav {
+	}
+	// .footer__contact
+	&__contact {
+	}
+}
+.info-footer {
+	display: grid;
+	gap: rem(20);
+	// .info-footer__logo
+	&__logo {
+		font-family: "Clicker Script";
+		font-size: rem(54);
+	}
+	// .info-footer__text
+	&__text {
+		font-size: rem(14);
+		line-height: math.div(22, 14);
+	}
+	// .info-footer__social
+	&__social {
+	}
+}
+.social-footer {
+	display: flex;
+	gap: rem(20);
+	align-items: center;
+	// .social-footer__link
+	&__link {
+		transition: opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.nav-footer {
+	// display: flex;
+	display: grid;
+	grid-template-columns: repeat(2, rem(140));
+	@include adaptiveValue("column-gap", 66, 20);
+	// .nav-footer__column
+	&__column {
+		// display: grid;
+		// @include adaptiveValue("gap", 55, 20);
+	}
+	// .nav-footer__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 20);
+		}
+	}
+	// .nav-footer__list
+	&__list {
+	}
+	// .nav-footer__item
+	&__item {
+	}
+	// .nav-footer__link
+	&__link {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(42, 18);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--bg-button);
+			}
+		}
+	}
+}
+.contact-footer {
+	// .contact-footer__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 31, 20);
+		}
+	}
+	// .contact-footer__body
+	&__body {
+		display: grid;
+		gap: rem(22);
+	}
+	// .contact-footer__link
+	&__link {
+		@include adaptiveValue("font-size", 18, 16);
+		// line-height: math.div(24, 18);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--bg-button);
+			}
+		}
+	}
+}
+
+//====================================================================================================
